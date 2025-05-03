@@ -1,5 +1,7 @@
 ads:
   interval: 1800
+  #Interval is specified in ticks.
   #インターバルはtickで指定。
   messages:
     - "出てくるメッセージは自由に変更できます"
+    - "You can freely change the message that appears."

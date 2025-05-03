@@ -1,5 +1,5 @@
 name: AdvertisingPlugin
-version: 1.0.0
+version: 1.0.1
 main: com.mc1510ty.AdvertisingPlugin.Main
 api-version: 1.21
 folia-supported: true
