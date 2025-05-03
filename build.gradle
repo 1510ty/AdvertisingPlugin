@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+}
+
+allprojects {
+    group = 'com.mc1510ty'
+    version = '1.0.0'
+
+    apply plugin: 'java'
+
+    jar {
+        duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    }
+
+    repositories {
+        mavenCentral()
+        maven {
+            name = "papermc"
+            url = "https://repo.papermc.io/repository/maven-public/"
+        }
+        maven {
+            name = "spigotmc"
+            url = "https://hub.spigotmc.org/nexus/content/repositories/snapshots/"
+        }
+}
+
+
+    java {
+        toolchain {
+            languageVersion.set(JavaLanguageVersion.of(21))
+        }
+    }
+}
