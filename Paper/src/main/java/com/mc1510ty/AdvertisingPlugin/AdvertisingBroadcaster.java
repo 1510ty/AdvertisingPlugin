@@ -21,6 +21,7 @@ public class AdvertisingBroadcaster {
     public void start(long intervalTicks) {
         if (ads.isEmpty()) {
             plugin.getLogger().warning("宣伝メッセージが設定されていません！");
+            plugin.getLogger().warning("Promotional message not set!");
             return;
         }
 
@@ -38,7 +39,8 @@ public class AdvertisingBroadcaster {
                     intervalTicks
             );
 
-            plugin.getLogger().info("Foliaモードで宣伝を開始しました。");
+            plugin.getLogger().info("Foliaバージョンで開始します");
+            plugin.getLogger().info("Start with the Folia version");
 
         } catch (NoSuchMethodException e) {
             Bukkit.getScheduler().runTaskTimer(plugin, () -> {
@@ -46,7 +48,8 @@ public class AdvertisingBroadcaster {
                 index = (index + 1) % ads.size();
             }, 1L, intervalTicks);
 
-            plugin.getLogger().info("Paperモードで宣伝を開始しました。");
+            plugin.getLogger().info("Paperバージョンで開始します");
+            plugin.getLogger().info("Start with the Paper version");
         }
     }
 }

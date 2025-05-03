@@ -19,6 +19,7 @@ public class AdvertisingBroadcaster {
     public void start(long intervalTicks) {
         if (ads.isEmpty()) {
             plugin.getLogger().warning("宣伝メッセージが設定されていません！");
+            plugin.getLogger().warning("Promotional message not set!");
             return;
         }
 
@@ -26,5 +27,8 @@ public class AdvertisingBroadcaster {
             Bukkit.broadcastMessage(ads.get(index));
             index = (index + 1) % ads.size();
         }, 1L, intervalTicks);
+
+        plugin.getLogger().info("Spigotバージョンで開始します");
+        plugin.getLogger().info("Start with the Spigot version");
     }
 }
